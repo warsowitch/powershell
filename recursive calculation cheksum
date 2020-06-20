@@ -1,0 +1,2 @@
+# recursive hash calculation of a file in a folder with possibility of excluding certain type of file
+Get-ChildItem -Path C:\Users\VK5845\AppData\Local\Temp -Recurse -Exclude *.tmp* -file -Force -ea SilentlyContinue | Get-FileHash -Algorithm MD5
