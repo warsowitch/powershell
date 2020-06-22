@@ -7,3 +7,6 @@ Get-ChildItem -Path C:\Users\blablabla\AppData\Local\Temp -Recurse -Exclude *.tm
 # Recursive search for a sample with its hash
 $searchValue = "63E89BAD294B413D7B880DB930C4A0BD"
 Get-ChildItem -path C:\Users\blablabla -Filter *.ps1 -Recurse -ErrorAction SilentlyContinue -Force | Get-FileHash -Algorithm mD5 | Where-Object {$_.hash -EQ $searchValue}  | select Path, hash
+
+# Recursive search of a file with the calculation on the fly of its hash. You can choose where the search will start
+Get-ChildItem -path C:\Users\blabla -Filter tests.ps1 -Recurse -ErrorAction SilentlyContinue -Force | Get-FileHash -Algorithm mD5 | select Path, hash
