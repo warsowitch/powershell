@@ -10,3 +10,6 @@ Get-ChildItem -path C:\Users\blablabla -Filter *.ps1 -Recurse -ErrorAction Silen
 
 # Recursive search of a file with the calculation on the fly of its hash. You can choose where the search will start
 Get-ChildItem -path C:\Users\blabla -Filter tests.ps1 -Recurse -ErrorAction SilentlyContinue -Force | Get-FileHash -Algorithm mD5 | select Path, hash
+
+# Recursive search for a file with a specific extension and calculation of its hash, identical to the previous command line, you can choose where the search will start
+Get-ChildItem -path C:\Users\blabla -Filter *.ps1 -Recurse -ErrorAction SilentlyContinue -Force | Get-FileHash -Algorithm mD5 | select Path, hash
