@@ -17,3 +17,9 @@ Get-ChildItem -path C:\Users\blabla -Filter *.ps1 -Recurse -ErrorAction Silently
 # regkey search for a specific file
 Get-ChildItem -path HKLM:\ -Recurse -ea SilentlyContinue | where {$_.Name -match 'notepad'}
 Get-ChildItem -path HKLM:\ -Recurse -ea SilentlyContinue | get-itemproperty | where {$_ -match 'notepad' -or $_ -match 'sql'}
+
+  # Otherwise
+  $filename="outlook"
+  Get-ChildItem -path HKLM:\ -Recurse -ea SilentlyContinue | where {$_.Name -match $filename}
+    # or
+  Get-ChildItem -path HKLM:\ -Recurse -ea SilentlyContinue | get-itemproperty | where {$_ -match $filename}
