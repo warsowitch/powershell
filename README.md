@@ -6,8 +6,7 @@ OS Name:                   Microsoft Windows 10 Entreprise
 OS Version:                10.0.17763 N/A Build 17763
 System Type:               x64-based PC
 
-# Powershell version
-                                                                
+# Powershell version                                                          
 PSVersion                      5.1.17763.1007                                                                                                                                                                  
 PSEdition                      Desktop                                                                                                                                                                               
 PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0...}                                                                                                                                                               
