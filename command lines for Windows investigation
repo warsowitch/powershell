@@ -26,7 +26,7 @@ Get-ChildItem -path HKLM:\ -Recurse -ea SilentlyContinue | get-itemproperty | wh
 
 # Not signed file in the specific file path
 $pathfile="C:\Users\blabla\AppData\Local\*.exe"
-Get-ChildItem -Recurse $pathfile -ea SilentlyContinue| ForEach-object {Get-AuthenticodeSignature $_ -ea SilentlyContinue} | Where-Object {$_.status -ine "Valid"} | Select Status,Path
+Get-ChildItem -Recurse $pathfile -ea SilentlyContinue | ForEach-object {Get-AuthenticodeSignature $_ -ea SilentlyContinue} | Where-Object {$_.status -ine "Valid"} | Select Status,Path
   # Without variable
 Get-ChildItem -Recurse appdata\..\*.exe -ea SilentlyContinue | ForEach-Object {Get-AuthenticodeSignature $_ -ea SilentlyContinue} | Where-Object {$_.status -ine "valide"} | select status,path
 
