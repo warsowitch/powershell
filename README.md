@@ -1,3 +1,4 @@
+
 # powershell
 powershell command line for quick Windows investigation
 
@@ -11,3 +12,5 @@ PSVersion                      5.1.17763.1007
 PSEdition                      Desktop                                                                                                                                                                               
 PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0...}                                                                                                                                                               
 BuildVersion                   10.0.17763.1007
+
+Thanks to @CyberRaiju
