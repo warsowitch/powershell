@@ -30,3 +30,5 @@ Get-ChildItem -Recurse $pathfile -ea SilentlyContinue | ForEach-object {Get-Auth
   # Without variable
 Get-ChildItem -Recurse appdata\..\*.exe -ea SilentlyContinue | ForEach-Object {Get-AuthenticodeSignature $_ -ea SilentlyContinue} | Where-Object {$_.status -ine "valide"} | select status,path
 
+# check enable log
+Get-EventLog -LogName *
